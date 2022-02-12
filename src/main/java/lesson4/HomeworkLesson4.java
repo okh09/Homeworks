@@ -53,6 +53,30 @@ public class HomeworkLesson4 {
         }
     }
 
+    private static void initMap() {
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                map[i][j] = DOT_EMPTY;
+            }
+        }
+    }
+
+    private static void printMap() {
+        System.out.print(HEADER_SYMBOL + SPACE);
+        for (int i = 1; i <= SIZE; i++) {
+            System.out.print(i + SPACE);
+        }
+        System.out.println();
+
+        for (int i = 0; i < SIZE; i++) {
+            System.out.print(i + 1 + SPACE);
+            for (int j = 0; j < SIZE; j++) {
+                System.out.print(map[i][j] + SPACE);
+            }
+            System.out.println();
+        }
+    }
+
     private static boolean checkEnd(char symbol) {
         if (checkWin(symbol)) {
             if (symbol == DOT_HUMAN) {
@@ -158,30 +182,6 @@ public class HomeworkLesson4 {
 
     private static boolean isNumberValid(int n) {
         return n >= 1 && n <= SIZE;
-    }
-
-    private static void printMap() {
-        System.out.print(HEADER_SYMBOL + SPACE);
-        for (int i = 1; i <= SIZE; i++) {
-            System.out.print(i + SPACE);
-        }
-        System.out.println();
-
-        for (int i = 0; i < SIZE; i++) {
-            System.out.print(i + 1 + SPACE);
-            for (int j = 0; j < SIZE; j++) {
-                System.out.print(map[i][j] + SPACE);
-            }
-            System.out.println();
-        }
-    }
-
-    private static void initMap() {
-        for (int i = 0; i < SIZE; i++) {
-            for (int j = 0; j < SIZE; j++) {
-                map[i][j] = DOT_EMPTY;
-            }
-        }
     }
 
     private static boolean isContinueGame() {
