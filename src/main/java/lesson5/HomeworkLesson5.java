@@ -11,7 +11,8 @@ public class HomeworkLesson5 {
         personArray[3] = new Personal("Леонид Волков Евгениевич", "samuray8@gmail.com", "Инженер", "89001958197",45, 80000);
         personArray[4] = new Personal("Ксения Собчак Анатолиевна", "sobchak01@mail.ru", "Кассир", "89001556677", 33, 50000);
 
-        for (Personal personal : personArray) {
+        for (int i = 0; i < personArray.length; i++) {
+            Personal personal = personArray[i];
             if (personal.getAge() > 40)
                 System.out.println(personal);
 
