@@ -53,12 +53,6 @@ public class Main {
 //        orangeBox1.moveAt(appleBox); //Error
 
 
-
-
-
-
-
-
     }
 
     private static <T> void swapElements(T[] arr, int index1, int index2) {
